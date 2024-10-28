@@ -27,7 +27,7 @@ export default defineComponent({
 
     const fetchDeliveries = async () => {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:3000/api/deliveries', {
+      const response = await axios.get('http://localhost:8889/api/deliveries', {
         headers: { Authorization: `Bearer ${token}` },
       });
       deliveries.value = response.data;
