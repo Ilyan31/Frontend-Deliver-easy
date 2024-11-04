@@ -1,13 +1,22 @@
 <template>
-  <router-view />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'App',
-};
+});
 </script>
 
 <style>
-/* Styles globaux, si nécessaire */
+/* Ajoutez ici les styles globaux */
+#app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+}
 </style>
