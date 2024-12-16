@@ -1,0 +1,230 @@
+/* Palette de couleurs vibrantes */
+:root {
+  --color-primary: #ff007a; /* Rose vif */
+  --color-secondary: #0096ff; /* Bleu électrique */
+  --color-accent: #34d399; /* Vert menthe */
+  --color-background: #1a1a1a; /* Noir mat */
+  --color-text: #f9f9f9; /* Blanc pur */
+  --color-border: #333; /* Gris foncé */
+
+  --font-main: 'Montserrat', sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+
+  --radius-small: 8px;
+  --radius-large: 16px;
+
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
+}
+
+/* Reset global */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Animation globale */
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Liens futuristes */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Boutons avec dégradés */
+button {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Formulaires épurés */
+input,
+textarea {
+  width: 100%;
+  background: var(--color-border);
+  color: var(--color-text);
+  padding: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+  border: none;
+  border-radius: var(--radius-small);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--color-accent);
+  background: #222;
+}
+
+/* Titres audacieux */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-medium);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+}
+
+/* Grilles asymétriques */
+.grid {
+  display: grid;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-auto {
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/* Cartes modernes */
+.card {
+  background: var(--color-border);
+  color: var(--color-text);
+  border-radius: var(--radius-large);
+  padding: var(--spacing-medium);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Liste stylisée */
+ul {
+  list-style: none;
+}
+
+li {
+  padding: var(--spacing-small) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li::before {
+  content: '➤';
+  color: var(--color-primary);
+  margin-right: var(--spacing-small);
+}
+
+/* Tableaux originaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-large);
+  background: #222;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: var(--spacing-small);
+  text-align: left;
+  color: var(--color-text);
+}
+
+th {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: var(--color-border);
+}
+
+/* Animation du pied de page */
+footer {
+  text-align: center;
+  padding: var(--spacing-large);
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+}
+
+footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
